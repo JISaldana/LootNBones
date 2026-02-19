@@ -11,7 +11,7 @@ const SPEED = 120.0
 
 # Proximamente Stats
 @export var max_health: int = 6
-@export var poise: float = 300
+@export var poise: float = 350
 var knockback_velocity = Vector2.ZERO
 var current_health: int = max_health
 var is_invulnerable = false
