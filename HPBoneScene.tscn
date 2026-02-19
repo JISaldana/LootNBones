@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cn3c3t51k18yv"]
+
+[ext_resource type="Texture2D" uid="uid://b0bweboecnxvb" path="res://Player/Interface/HPBone.png" id="1_p7n8r"]
+
+[node name="HPBone" type="TextureRect" unique_id=1551831226]
+texture = ExtResource("1_p7n8r")
+expand_mode = 3
