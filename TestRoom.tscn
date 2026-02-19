@@ -597,7 +597,7 @@ limit_right = 877
 limit_bottom = 586
 
 [node name="PlayerBody" type="CharacterBody2D" parent="." unique_id=1333968089 groups=["player"]]
-position = Vector2(529, 193)
+position = Vector2(431, 98)
 script = ExtResource("2_cbkwy")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="PlayerBody" unique_id=1666832310]
@@ -631,7 +631,7 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_gcbeg")
 
 [node name="EnemyBody" type="CharacterBody2D" parent="." unique_id=1706779488 groups=["enemies"]]
-position = Vector2(630, 442)
+position = Vector2(579, 454)
 script = ExtResource("5_fk7fr")
 
 [node name="EnemyCollision" type="CollisionShape2D" parent="EnemyBody" unique_id=123310304]
@@ -652,7 +652,7 @@ position = Vector2(1.25, 0.25)
 shape = SubResource("CircleShape2D_g07mp")
 
 [node name="EnemyBody2" type="CharacterBody2D" parent="." unique_id=27355709 groups=["enemies"]]
-position = Vector2(226, 265)
+position = Vector2(164, 194)
 script = ExtResource("5_fk7fr")
 
 [node name="EnemyCollision" type="CollisionShape2D" parent="EnemyBody2" unique_id=1702439557]
@@ -673,7 +673,7 @@ position = Vector2(1.25, 0.25)
 shape = SubResource("CircleShape2D_g07mp")
 
 [node name="EnemyBody3" type="CharacterBody2D" parent="." unique_id=1956308904 groups=["enemies"]]
-position = Vector2(349, 507)
+position = Vector2(264, 459)
 script = ExtResource("5_fk7fr")
 
 [node name="EnemyCollision" type="CollisionShape2D" parent="EnemyBody3" unique_id=1130678212]
@@ -694,9 +694,33 @@ position = Vector2(1.25, 0.25)
 [node name="AreaDetector" type="CollisionShape2D" parent="EnemyBody3/Detector" unique_id=1395250629]
 shape = SubResource("CircleShape2D_g07mp")
 
+[node name="EnemyBody4" type="CharacterBody2D" parent="." unique_id=1128033500 groups=["enemies"]]
+position = Vector2(685, 165)
+script = ExtResource("5_fk7fr")
+
+[node name="EnemyCollision" type="CollisionShape2D" parent="EnemyBody4" unique_id=1890722245]
+position = Vector2(2.25, 1.25)
+shape = SubResource("CapsuleShape2D_adu6t")
+debug_color = Color(0.9098039, 0, 0, 0.41960785)
+
+[node name="EnemySprite" type="AnimatedSprite2D" parent="EnemyBody4" unique_id=846475184]
+position = Vector2(1.2500153, 0.25)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_0cgfa")
+animation = &"side"
+frame_progress = 0.43181747
+
+[node name="Detector" type="Area2D" parent="EnemyBody4" unique_id=2136218232]
+position = Vector2(1.25, 0.25)
+
+[node name="AreaDetector" type="CollisionShape2D" parent="EnemyBody4/Detector" unique_id=209881176]
+shape = SubResource("CircleShape2D_g07mp")
+
 [connection signal="body_entered" from="EnemyBody/Detector" to="EnemyBody" method="_on_detector_body_entered"]
 [connection signal="body_exited" from="EnemyBody/Detector" to="EnemyBody" method="_on_detector_body_exited"]
 [connection signal="body_entered" from="EnemyBody2/Detector" to="EnemyBody2" method="_on_detector_body_entered"]
 [connection signal="body_exited" from="EnemyBody2/Detector" to="EnemyBody2" method="_on_detector_body_exited"]
 [connection signal="body_entered" from="EnemyBody3/Detector" to="EnemyBody3" method="_on_detector_body_entered"]
 [connection signal="body_exited" from="EnemyBody3/Detector" to="EnemyBody3" method="_on_detector_body_exited"]
+[connection signal="body_entered" from="EnemyBody4/Detector" to="EnemyBody4" method="_on_detector_body_entered"]
+[connection signal="body_exited" from="EnemyBody4/Detector" to="EnemyBody4" method="_on_detector_body_exited"]
