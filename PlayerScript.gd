@@ -24,7 +24,7 @@ func _ready():
 	await get_tree().process_frame
 	health_changed.emit(current_health)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if knockback_velocity.length() > 10:
 		velocity = knockback_velocity
 		knockback_velocity = lerp(knockback_velocity, Vector2.ZERO, 0.1)
@@ -48,7 +48,7 @@ func _physics_process(delta):
 
 func take_damage(amount: int = 1, attacker_pos: Vector2 = Vector2.ZERO):
 	if is_invulnerable:
-		return 
+		return
 	current_health -= amount
 	current_health = max(0, current_health)
 	health_changed.emit(current_health)
@@ -72,7 +72,8 @@ func start_invulnerability():
 	is_invulnerable = false
 
 func die():
-	get_tree().reload_current_scene()
+	if is_inside_tree():
+		get_tree().reload_current_scene()
 
 func update_direction_and_pivot(dir):
 	if abs(dir.x) > abs(dir.y):
