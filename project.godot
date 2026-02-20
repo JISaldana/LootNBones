@@ -26,6 +26,7 @@ window/stretch/scale_mode="integer"
 
 enemies=""
 player=""
+Objects=""
 
 [physics]
 
