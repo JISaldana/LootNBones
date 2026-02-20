@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cn3c3t51k18yv" path="res://HPBoneScene.tscn" id="2_lkjp7"]
 [ext_resource type="Texture2D" uid="uid://3e58fijuqos3" path="res://Player/Interface/SkullHPBar.png" id="3_j3be3"]
 [ext_resource type="PackedScene" uid="uid://bfd4btf4nw3xm" path="res://Player/Player.tscn" id="5_fk7fr"]
+[ext_resource type="PackedScene" uid="uid://blk8wgt82vglx" path="res://Objects/Chest.tscn" id="7_adu6t"]
 [ext_resource type="PackedScene" uid="uid://b7cxosv5eb8jv" path="res://Enemies/Slime.tscn" id="10_yjt0e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gcbeg"]
@@ -345,8 +346,11 @@ limit_top = -41
 limit_right = 877
 limit_bottom = 586
 
+[node name="Area2D" parent="." unique_id=675398238 instance=ExtResource("7_adu6t")]
+position = Vector2(435, 116)
+
 [node name="Player" parent="." unique_id=647239139 instance=ExtResource("5_fk7fr")]
-position = Vector2(431, 98)
+position = Vector2(434, 190)
 
 [node name="SlimeEnemy" parent="." unique_id=446430930 instance=ExtResource("10_yjt0e")]
 position = Vector2(692, 166)
