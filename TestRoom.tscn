@@ -358,4 +358,4 @@ position = Vector2(569, 418)
 position = Vector2(274, 433)
 
 [node name="SlimeEnemy4" parent="." unique_id=212083994 instance=ExtResource("10_yjt0e")]
-position = Vector2(310, 200)
+position = Vector2(156, 193)
